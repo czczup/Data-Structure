@@ -1,4 +1,4 @@
-#include <stdio.h>
+ï»¿#include <stdio.h>
 double f1(int n,double a[],double x){
 	int i;
 	double p=a[0];
@@ -6,7 +6,7 @@ double f1(int n,double a[],double x){
 		p+=(a[i]*pow(x,i));
 	}
 	return p;
-}//ÆÕÍ¨Ëã·¨ T(n)=C1*n^2+C2*n
+}//æ™®é€šç®—æ³• T(n)=C1*n^2+C2*n
 
 double f2(int n,double a[],double x){
     int i;
@@ -15,4 +15,4 @@ double f2(int n,double a[],double x){
         p=a[i-1]+x*p;
     }
     return p; 
-}//ÇØ¾ÅÉØËã·¨ T(n)=C*n
+}//ç§¦ä¹éŸ¶ç®—æ³• T(n)=C*n

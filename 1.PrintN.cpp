@@ -1,11 +1,11 @@
-#include <stdio.h>
+ï»¿#include <stdio.h>
 void PrintN(int N)
 {   int i;
     for(i=1;i<=N;i++){
         printf("%d\n",i);
     }
     return 0;
-} //Ñ­»·ÊµÏÖ
+} //å¾ªçŽ¯å®žçŽ°
 
 void PrintN(int N)
 {   if(N){
@@ -13,6 +13,6 @@ void PrintN(int N)
         printf("%d\n",N);
     }   
     return 0;
-} //µÝ¹éÊµÏÖ
+} //é€’å½’å®žçŽ°
 
  

@@ -1,9 +1,9 @@
-void SelectionSort(int List[],int N) 
-{/*½«N¸öÕûÊı½øĞĞ·Çµİ¼õÅÅĞò*/
+ï»¿void SelectionSort(int List[],int N) 
+{/*å°†Nä¸ªæ•´æ•°è¿›è¡Œéé€’å‡æ’åº*/
     for(i=0;i<N;i++){
         MinPosition=ScanForMin(List,i,N-1);
-        /*´ÓList[i]µ½List[N-1]ÖĞÕÒ×îĞ¡Ôª£¬²¢½«ÆäÎ»ÖÃ¸³¸øMinPosition*/
+        /*ä»List[i]åˆ°List[N-1]ä¸­æ‰¾æœ€å°å…ƒï¼Œå¹¶å°†å…¶ä½ç½®èµ‹ç»™MinPosition*/
         Swap(List[i],List[MinPosition]);
-        /*½«Î´ÅÅĞò²¿·ÖµÄ×îĞ£Ô°»»µ½ÓĞĞò²¿·ÖµÄ×îºóÎ»ÖÃ*/
+        /*å°†æœªæ’åºéƒ¨åˆ†çš„æœ€æ ¡å›­æ¢åˆ°æœ‰åºéƒ¨åˆ†çš„æœ€åä½ç½®*/
     }
 }

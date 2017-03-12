@@ -1,9 +1,9 @@
-#include <stdio.h>
+ï»¿#include <stdio.h>
 #include <time.h>
 #include <math.h>
 #define MAXN 10
 #define MAXK 1e7
-/*±»²âº¯Êı×î´óµ÷ÓÃ´ÎÊı*/
+/*è¢«æµ‹å‡½æ•°æœ€å¤§è°ƒç”¨æ¬¡æ•°*/
 clock_t start,stop;
 double duration;
 
@@ -14,7 +14,7 @@ double f1(int n,double a[],double x){
 		p+=(a[i]*pow(x,i));
 	}
 	return p;
-}//ÆÕÍ¨Ëã·¨ 
+}//æ™®é€šç®—æ³• 
 
 double f2(int n,double a[],double x){
     int i;
@@ -23,7 +23,7 @@ double f2(int n,double a[],double x){
         p=a[i-1]+x*p;
     }
     return p; 
-}//ÇØ¾ÅÉØËã·¨ 
+}//ç§¦ä¹éŸ¶ç®—æ³• 
 
 int main()
 {
@@ -50,4 +50,4 @@ int main()
     
     return 0;
  }
- /*½â¾öÎÊÌâµÄĞ§ÂÊ£¬ºÍËã·¨µÄÇÉÃî³Ì¶ÈÓĞ¹Ø*/
+ /*è§£å†³é—®é¢˜çš„æ•ˆç‡ï¼Œå’Œç®—æ³•çš„å·§å¦™ç¨‹åº¦æœ‰å…³*/

@@ -1,0 +1,47 @@
+﻿树与树的表示
+•客观世界中许多事物存在层次关系
+•分层次组织在管理上有更高的效率
+
+查找
+•根据某个给定的关键字K,从集合R中找出关键字与K相同的记录
+•静态查找:集合中记录是固定的
+    •没有插入和删除操作，只有查找
+•动态查找:集合中记录是动态变化的
+    •除查找，还可能发生插入和删除
+
+方法1:顺序查找
+•顺序查找的一种实现(无哨兵)
+int SequentialSearch(List Tb1,ElementType K)
+{/*在Element[1]-Element[n]中查找关键字为K的数据*/
+    int i;
+    for(i=Tb1->Length;i>0 && Tb1->Element[i]!=K;i--);
+    return i;/*查找成功返回所在单元下标*/
+}
+
+•有哨兵
+int SequentialSearch(List Tb1,ElementType K)
+{/*在Element[1]-Element[n]中查找关键字为K的数据*/
+    int i;
+    Tb1->Element[0] = K;/*建立哨兵*/
+    for(i=Tb1->Length;Tb1->Element[i]!=K;i--);
+    return i;/*查找成功返回所在单元下标*/
+}
+•顺序查找算法的时间复杂度是O(n)
+方法2:二分查找(Binary Search)
+假设n个数据元素的关键字满足有序(比如:小到大)
+    k1<k2<...<kn
+并且是连续存放(数组)，那么可以进行二分查找
+
+int BinarySearch(List Tb1,ElementType K)
+{/*在表Tb1中查找关键字为K的数据元素*/
+    int left,right,mid,NoFound = -1;
+    left = 1;                    /*初始左边界*/
+    right = Tb1->Length;         /*初始右边界*/
+    while(left <= right){
+        mid = (left + right)/2;  /*计算中间元素坐标*/
+        if(K < Tb1->Element[mid])        right = mid - 1;  /*调整右边界*/
+        else if(K > Tb1->Element[mid])   left = mid + 1;   /*调整左边界*/
+        else return mid; /*查找成功,返回数据元素的下标*/
+    }
+    return NoFound;  /*查找不成功，返回-1*/
+}

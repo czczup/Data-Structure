@@ -1,3 +1,4 @@
+﻿/*二分查找*/
 #include <stdio.h>
 int BinarySearch(List Tb1,ElementType K)
 {
